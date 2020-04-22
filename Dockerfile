@@ -1,6 +1,6 @@
 FROM alpine:3.10
 
-RUN apk add --update --no-cache ansible openssh openrc \
+RUN apk add --update --no-cache ansible openssh openrc git \
 && rm -rf /var/cache/apk/* && rc-update add sshd
 
 ENV ANSIBLE_GATHERING smart
