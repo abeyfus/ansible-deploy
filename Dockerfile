@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk add --update --no-cache ansible openssh openrc git curl \
+RUN apk add --update --no-cache ansible openssh openrc git curl ca-certificates \
 && rm -rf /var/cache/apk/* && rc-update add sshd
 
 ENV ANSIBLE_GATHERING smart
